@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FindIt - Game Availability</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="topbar">
+
+        <div class="logo">
+            Find<span>It</span>
+        </div>
+
+        <div class="tagline">
+            Find. Compare. Play.
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="small-title">
+                GAME AVAILABILITY ENGINE
+            </div>
+
+            <h1>
+                Find any game.<br>
+                Know where to play it.
+            </h1>
+
+            <p>
+                Search a game and discover its platforms,
+                availability and official stores.
+            </p>
+
+
+            <!-- SEARCH -->
+
+            <div class="search-wrapper">
+
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search GTA, Minecraft..."
+                        autocomplete="off"
+                    >
+
+                    <button
+                        id="searchButton"
+                        type="button"
+                    >
+                        Search
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="suggestions"
+                    class="suggestions"
+                ></div>
+
+            </div>
+
+
+            <!-- POPULAR SEARCHES -->
+
+            <div class="examples">
+
+                Popular:
+
+                <button
+                    type="button"
+                    onclick="quickSearch('GTA')"
+                >
+                    GTA
+                </button>
+
+                <button
+                    type="button"
+                    onclick="quickSearch('Minecraft')"
+                >
+                    Minecraft
+                </button>
+
+                <button
+                    type="button"
+                    onclick="quickSearch('Cyberpunk')"
+                >
+                    Cyberpunk
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- PLATFORM FILTER -->
+
+        <section class="filter-section">
+
+            <div class="filter-title">
+                Browse by platform
+            </div>
+
+
+            <div class="filter-list">
+
+                <button
+                    type="button"
+                    class="filter-button active"
+                    data-platform="all"
+                >
+                    All
+                </button>
+
+
+                <button
+                    type="button"
+                    class="filter-button"
+                    data-platform="PC"
+                >
+                    🖥 PC
+                </button>
+
+
+                <button
+                    type="button"
+                    class="filter-button"
+                    data-platform="PlayStation"
+                >
+                    🎮 PlayStation
+                </button>
+
+
+                <button
+                    type="button"
+                    class="filter-button"
+                    data-platform="Xbox"
+                >
+                    🟩 Xbox
+                </button>
+
+
+                <button
+                    type="button"
+                    class="filter-button"
+                    data-platform="Nintendo"
+                >
+                    🔴 Nintendo
+                </button>
+
+
+                <button
+                    type="button"
+                    class="filter-button"
+                    data-platform="Android"
+                >
+                    📱 Android
+                </button>
+
+
+                <button
+                    type="button"
+                    class="filter-button"
+                    data-platform="iOS"
+                >
+                    🍎 iOS
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTS -->
+
+        <section
+            id="results"
+            class="results"
+        >
+
+            <div class="empty-state">
+
+                <div class="empty-icon">
+                    🎮
+                </div>
+
+                <h2>
+                    Search for a game
+                </h2>
+
+                <p>
+                    Find platforms, availability and official stores.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            FindIt helps you discover official game sources.
+        </p>
+
+        <p>
+            © 2026 FindIt
+        </p>
+
+    </footer>
+
+
+    <!-- IMPORTANT:
+         Supabase must load BEFORE script.js
+    -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
