@@ -1020,3 +1020,19 @@ async function loadGamesFromDatabase() {
 }
 
 loadGamesFromDatabase();
+async function loadGamesFromDatabase() {
+
+    const { data, error } = await supabaseClient
+        .from("games")
+        .select("*");
+
+    if (error) {
+        console.error("GAME DATABASE ERROR:", error);
+        return;
+    }
+
+    console.log("REAL GAMES FROM SUPABASE:", data);
+
+}
+
+loadGamesFromDatabase();
